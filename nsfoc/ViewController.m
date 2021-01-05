@@ -47,11 +47,23 @@
 }
 
 - (void)chooseClick:(UIButton *)sender {
-    UIImagePickerController *PickerImage = [[UIImagePickerController alloc]init];
-    PickerImage.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    PickerImage.allowsEditing = YES;
-    PickerImage.delegate = self;
-    [self presentViewController:PickerImage animated:YES completion:nil];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Photo Select" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIImagePickerController *PickerImage = [[UIImagePickerController alloc]init];
+        PickerImage.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        PickerImage.allowsEditing = YES;
+        PickerImage.delegate = self;
+        [self presentViewController:PickerImage animated:YES completion:nil];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Take photo" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        UIImagePickerController *PickerImage = [[UIImagePickerController alloc]init];
+        PickerImage.sourceType = UIImagePickerControllerSourceTypeCamera;
+        PickerImage.allowsEditing = YES;
+        PickerImage.delegate = self;
+        [self presentViewController:PickerImage animated:YES completion:nil];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {

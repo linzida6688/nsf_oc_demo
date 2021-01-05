@@ -49,15 +49,14 @@ static CGFloat const kPersentTag = 0.3;
     CGContextRelease(context);
     FIRModelInputs *inputs = [[FIRModelInputs alloc] init];
     NSMutableData *inputData = [[NSMutableData alloc] initWithCapacity:0];
-    int offs =0;
-    for (int row = offs; row < INPUTWIDTH+offs; row++) {
-        for (int col = offs; col < INPUTWIDTH+offs; col++) {
-            long offset = 4 * (col * INPUTWIDTH + row);
-
-            //Float32 alph = imageData[offset];
-            Float32 red = imageData[offset+1];
-            Float32 green = imageData[offset+2];
-            Float32 blue = imageData[offset+3];
+    int offs = 0;
+    for (int row = offs; row < INPUTWIDTH + offs; row++) {
+        for (int col = offs; col < INPUTWIDTH + offs; col++) {
+            long offset = 4 * (row * INPUTWIDTH + col);
+            
+            Float32 red = imageData[offset];
+            Float32 green = imageData[offset+1];
+            Float32 blue = imageData[offset+2];
             Float32 red1 = red - 123;
             Float32 green1 = green - 117;
             Float32 blue1 = blue - 104;
@@ -65,7 +64,6 @@ static CGFloat const kPersentTag = 0.3;
             [inputData appendBytes:&blue1 length:sizeof(blue1)];
             [inputData appendBytes:&green1 length:sizeof(green1)];
             [inputData appendBytes:&red1 length:sizeof(red1)];
-            
         }
     }
 
@@ -82,7 +80,7 @@ static CGFloat const kPersentTag = 0.3;
     }
     [ioOptions setOutputFormatForIndex:0
                                   type:FIRModelElementTypeFloat32
-                            dimensions:@[@1,@2]
+                            dimensions:@[@1, @2]
                                  error:&error];
     if (error != nil) {
         return;
@@ -97,9 +95,9 @@ static CGFloat const kPersentTag = 0.3;
             if (completBlock) {
                 BOOL canShow = NO;
                 if(value >= kPersentTag) { //色情图片
-                    canShow = YES;
-                } else { //不是
                     canShow = NO;
+                } else { //不是
+                    canShow = YES;
                 }
                 completBlock(canShow, value);
             }
