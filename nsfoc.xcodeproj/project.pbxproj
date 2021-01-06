@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4976A6CDB0F9BF08CC978867 /* libPods-nsfoc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9775C3C5496D44F1AD839953 /* libPods-nsfoc.a */; };
 		FB0C90472558E02000B48DBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB0C90462558E02000B48DBB /* GoogleService-Info.plist */; };
-		FB2B88B125A40E23009F6FBA /* nsfw.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FB2B88B025A40E23009F6FBA /* nsfw.tflite */; };
+		FB32EC0E25A54B11009F41F7 /* nsfw.tflite in Resources */ = {isa = PBXBuildFile; fileRef = FB32EC0D25A54B11009F41F7 /* nsfw.tflite */; };
 		FB7201C0252179FE00D31461 /* BaseIdentifyImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7201BF252179FE00D31461 /* BaseIdentifyImageManager.m */; };
 		FBCEA99425203AEC0079BDC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCEA99325203AEC0079BDC9 /* AppDelegate.m */; };
 		FBCEA99725203AEC0079BDC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCEA99625203AEC0079BDC9 /* ViewController.m */; };
@@ -24,7 +24,7 @@
 		9775C3C5496D44F1AD839953 /* libPods-nsfoc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nsfoc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4144C687580243FE4830043 /* Pods-nsfoc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nsfoc.debug.xcconfig"; path = "Target Support Files/Pods-nsfoc/Pods-nsfoc.debug.xcconfig"; sourceTree = "<group>"; };
 		FB0C90462558E02000B48DBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FB2B88B025A40E23009F6FBA /* nsfw.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = nsfw.tflite; sourceTree = "<group>"; };
+		FB32EC0D25A54B11009F41F7 /* nsfw.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = nsfw.tflite; sourceTree = "<group>"; };
 		FB7201BE252179FE00D31461 /* BaseIdentifyImageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseIdentifyImageManager.h; sourceTree = "<group>"; };
 		FB7201BF252179FE00D31461 /* BaseIdentifyImageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseIdentifyImageManager.m; sourceTree = "<group>"; };
 		FBC0FBD425207AAA00F9F399 /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +86,7 @@
 		FBC0FBDA25208EAC00F9F399 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FB2B88B025A40E23009F6FBA /* nsfw.tflite */,
+				FB32EC0D25A54B11009F41F7 /* nsfw.tflite */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 			files = (
 				FBCEA99F25203AF20079BDC9 /* LaunchScreen.storyboard in Resources */,
 				FBCEA99C25203AF20079BDC9 /* Assets.xcassets in Resources */,
-				FB2B88B125A40E23009F6FBA /* nsfw.tflite in Resources */,
+				FB32EC0E25A54B11009F41F7 /* nsfw.tflite in Resources */,
 				FB0C90472558E02000B48DBB /* GoogleService-Info.plist in Resources */,
 				FBCEA99A25203AEC0079BDC9 /* Main.storyboard in Resources */,
 			);
